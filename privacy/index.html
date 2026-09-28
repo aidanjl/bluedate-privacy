@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BlueDate Privacy Policy</title>
-  <meta name="description" content="Privacy policy for the BlueDate iOS app — nearby Bluetooth dating.">
+  <meta name="description" content="Privacy policy for the BlueDate iOS app — nearby Bluetooth dating and optional internet continue-chat.">
   <style>
     :root {
       --bg: #f7f9fc;
@@ -103,7 +103,8 @@
     <p>This policy describes what BlueDate collects, how it is used, and what stays on your device. It is written for App Store review and end users. It is not legal advice.</p>
 
     <h2>1. Summary</h2>
-    <p>BlueDate helps adults find other BlueDate users <strong>nearby</strong> using <strong>Bluetooth Low Energy (BLE)</strong>. Today, profiles you see nearby, smiles, matches, chats, and party messages are handled <strong>on your device and over Bluetooth between phones</strong>. We do <strong>not</strong> currently operate a remote chat service that continues after you leave Bluetooth range.</p>
+    <p>BlueDate helps adults find other BlueDate users <strong>nearby</strong> using <strong>Bluetooth Low Energy (BLE)</strong>. Nearby discovery, smiles, matches, and in-range chats are handled <strong>on your device and over Bluetooth between phones</strong>.</p>
+    <p>BlueDate provides nearby Bluetooth chat, and <strong>may also</strong> provide <strong>server-relayed chat</strong> so conversations can continue <strong>over the internet</strong> after you leave Bluetooth range, when that feature is enabled in the app and <strong>both users opt in</strong> (for example, choosing to stay connected after you leave). When internet continue-chat is enabled, message content and related identifiers may be transmitted to and stored on our servers to deliver messages when you are not nearby.</p>
     <p>You must be <strong>21 or older</strong>. Age is confirmed by <strong>self-attestation</strong> in the app (you confirm you are 21+), not by government ID or date-of-birth verification.</p>
 
     <h2>2. Information the app uses</h2>
@@ -129,7 +130,13 @@
     <p>Bluetooth identifiers and signal strength may be used on-device to estimate proximity. Discovery does <strong>not</strong> require an internet connection.</p>
 
     <h3>2.3 Smiles, matches, blocks, and chats</h3>
-    <p>Smiles, matches, unmatches, local blocks, chat messages, and party-channel messages are stored <strong>on your device</strong>. Chat and party traffic between matched or nearby users is sent <strong>over Bluetooth</strong> while devices stay in range and the app can keep a link. If you leave range, hide yourself, or unmatch, those Bluetooth conversations stop. <strong>We do not promise cloud-backed or remote chat at this time.</strong></p>
+    <p>Smiles, matches, unmatches, local blocks, chat messages, and party-channel messages are stored <strong>on your device</strong>. While you are nearby, chat and party traffic between matched or nearby users is sent <strong>over Bluetooth</strong> while devices stay in range and the app can keep a link.</p>
+    <p>After a nearby meet or match, you <strong>may choose to continue chatting over the internet</strong> via BlueDate’s servers when that feature is available in the app. Internet continue-chat requires <strong>consent / opt-in</strong> (for example, an in-app choice to stay connected after you leave). When both users have opted in and the feature is enabled:</p>
+    <ul>
+      <li>Message content, conversation metadata, and durable user identifiers may be transmitted to and stored on our servers (for example, Amazon Web Services) so we can deliver messages when users are not nearby</li>
+      <li>We may use <strong>push notifications</strong> to alert you to new messages</li>
+    </ul>
+    <p>If you leave Bluetooth range without opting into internet continue-chat, Bluetooth conversations stop. You can stop internet continue-chat by unmatching, blocking, or wiping social data (see Retention).</p>
 
     <h3>2.4 Safety actions</h3>
     <p>You can hide yourself, unmatch, block locally, wipe local social data, and <strong>report</strong> another user. Reports may be sent:</p>
@@ -140,36 +147,38 @@
     <p>Report contents may include the reported user’s local identifier, a reason you choose, and related context needed to investigate.</p>
 
     <h3>2.5 Device and local identifiers</h3>
-    <p>BlueDate creates a <strong>local user ID</strong> on your device (stored in app preferences) so your profile and nearby sessions stay consistent. This is not a Sign in with Apple or Cognito account in the current shipping build.</p>
+    <p>BlueDate creates a <strong>local user ID</strong> on your device (stored in app preferences) so your profile and nearby sessions stay consistent. This is not a Sign in with Apple or Cognito account in the current shipping build. When internet continue-chat or other cloud features are enabled, durable identifiers may also be used on our servers to route messages and maintain conversations.</p>
 
     <h3>2.6 Camera</h3>
     <p>The camera is used only so you can capture a selfie for your profile. Photos stay on device unless you later use an optional cloud sync feature (see below).</p>
 
-    <h2>3. Optional / future cloud features</h2>
-    <p>BlueDate’s product includes an AWS-backed API (profiles, photo upload, reports/blocks) that is <strong>not required</strong> for nearby Bluetooth use. If and when cloud configuration is enabled in a future build:</p>
+    <h2>3. Cloud features (optional and continue-chat)</h2>
+    <p>BlueDate’s nearby discovery and in-range chat work over Bluetooth and do <strong>not</strong> require an internet connection. Separately, BlueDate <strong>may</strong> use cloud services when features are enabled in the app:</p>
     <ul>
-      <li><strong>Profile sync</strong> and <strong>photo upload</strong> may send profile fields and images to our servers</li>
+      <li><strong>Internet continue-chat (opt-in):</strong> After a nearby meet or match, when the feature is available and you opt in (and the other person does too), message content, conversation metadata, and durable user identifiers may be transmitted to and stored on our servers (e.g. AWS) to deliver messages when you are not nearby. Push notifications may be used for new messages.</li>
+      <li><strong>Profile sync</strong> and <strong>photo upload</strong> may send profile fields and images to our servers when cloud configuration is enabled</li>
       <li><strong>Reports / blocks</strong> may be stored server-side to improve safety</li>
       <li><strong>Metrics / analytics</strong> may be collected to understand reliability and improve the product</li>
     </ul>
-    <p>We will update this policy and App Store privacy labels before enabling collection that changes the nutrition labels. Until cloud sync is turned on for your build, those server features are inactive.</p>
-    <p><strong>Remote continue-chat after you leave the venue</strong> is a possible future feature. It is <strong>not</strong> part of the current product promise. If we add it, we will require clear consent and update this policy.</p>
+    <p>We will keep App Store privacy labels aligned with the binary you submit. Until a given cloud feature is turned on for your build, that server path is inactive.</p>
 
     <h2>4. How we use information</h2>
     <p>We use information to:</p>
     <ul>
       <li>Provide nearby discovery, smiles, matches, and Bluetooth chat/party</li>
+      <li>Provide opt-in server-relayed chat so conversations can continue over the internet after you leave Bluetooth range, when that feature is enabled</li>
       <li>Show your profile to other nearby users you choose to be discoverable to</li>
       <li>Enforce safety tools (hide, block, report, wipe)</li>
       <li>Comply with law and App Store requirements</li>
-      <li>(Future) operate optional sync, metrics, and support tooling when enabled</li>
+      <li>Operate optional sync, metrics, and support tooling when enabled</li>
     </ul>
     <p>We do <strong>not</strong> sell your personal information.</p>
 
     <h2>5. Sharing</h2>
     <ul>
       <li><strong>Other nearby users:</strong> When Discoverable is on, people using BlueDate nearby can see the profile information you advertise over Bluetooth.</li>
-      <li><strong>Service providers (future):</strong> If cloud features are enabled, processors such as Amazon Web Services may host data under our instruction.</li>
+      <li><strong>Matched chat partners (internet continue-chat):</strong> If you opt into server-relayed chat, the other person in that conversation receives your messages through our servers.</li>
+      <li><strong>Service providers:</strong> When cloud features (including internet continue-chat) are enabled, processors such as Amazon Web Services may host data under our instruction. Push notification providers may receive device tokens and notification payloads needed to deliver alerts.</li>
       <li><strong>Legal / safety:</strong> We may retain and disclose report information if required by law or to address abuse.</li>
     </ul>
     <p>We do not operate a public social feed or web profile directory in the current app.</p>
@@ -178,29 +187,29 @@
     <ul>
       <li>Local profile, chats, matches, and blocks remain on your device until you delete them (e.g. Full wipe for social data, or deleting the app).</li>
       <li>Deleting the app removes on-device BlueDate data.</li>
-      <li>Server-side retention (if cloud features are enabled later) will be limited to what is needed for the feature, safety, and legal obligations; details will be updated here when live.</li>
+      <li>When internet continue-chat or other cloud features are enabled, we retain server-side message content, conversation metadata, and related identifiers as needed to deliver messages, operate the feature, support safety investigations, and meet legal obligations. You can stop further internet chat by unmatching, blocking, or wiping; we may retain limited records afterward as needed for delivery completion, safety, or law.</li>
     </ul>
-    <p>In-app controls today include: Hide me, Unmatch, Block (local), Report, Full wipe and clear cache, and removing your selfie.</p>
+    <p>In-app controls include: Hide me, Unmatch, Block (local), Report, Full wipe and clear cache, and removing your selfie. Opt-in for internet continue-chat (when available) is controlled in the app—for example, choosing whether to stay connected after you leave.</p>
 
     <h2>7. Children and age</h2>
     <p>BlueDate is for users <strong>21 years of age and older</strong>. We do not knowingly allow use by anyone under 21. Age is based on your confirmation in the app. If you believe someone under 21 is using BlueDate, contact us using the support details below.</p>
 
     <h2>8. Security</h2>
-    <p>We design the nearby experience to work without sending chats to our servers. No method of electronic storage or Bluetooth transmission is perfectly secure. Meet in public places and use Hide me / Block / Report if something feels wrong.</p>
+    <p>Nearby discovery and in-range chat are designed to work over Bluetooth without requiring our servers. When you opt into internet continue-chat, messages are transmitted to and stored on our servers so they can be delivered when you are not nearby. No method of electronic storage, Bluetooth, or internet transmission is perfectly secure. Meet in public places and use Hide me / Block / Report if something feels wrong.</p>
 
     <h2>9. International users</h2>
-    <p>BlueDate is initially offered via the Apple App Store. Processing (when cloud features exist) may occur in the regions where our providers operate (for example, AWS regions we configure).</p>
+    <p>BlueDate is initially offered via the Apple App Store. Processing (when cloud features exist, including internet continue-chat) may occur in the regions where our providers operate (for example, AWS regions we configure).</p>
 
     <h2>10. Changes</h2>
-    <p>We may update this policy as the product changes (especially if cloud sync, metrics, or remote chat ship). The “Last updated” date will change, and material changes will be reflected in App Store privacy disclosures as required.</p>
+    <p>We may update this policy as the product changes (especially as cloud sync, metrics, or internet continue-chat ship or change). The “Last updated” date will change, and material changes will be reflected in App Store privacy disclosures as required.</p>
 
     <h2>11. Contact</h2>
     <p><strong>Support email:</strong> <a href="mailto:bluedatesupport@protonmail.com">bluedatesupport@protonmail.com</a><br>
     <strong>Privacy policy URL:</strong> <a href="https://aidanjl.github.io/bluedate-privacy/privacy/">https://aidanjl.github.io/bluedate-privacy/privacy/</a></p>
-    <p>For privacy questions or data requests related to any server-side features once enabled, use the support email above.</p>
+    <p>For privacy questions or data requests related to any server-side features (including internet continue-chat), use the support email above.</p>
 
     <div class="note">
-      BlueDate is a nearby Bluetooth dating app. Chat stays on-device / over Bluetooth unless a future cloud feature is clearly enabled and disclosed.
+      BlueDate is a nearby Bluetooth dating app. In-range chat stays on-device / over Bluetooth. When internet continue-chat is enabled in the app and both users opt in, messages may also be relayed and stored on BlueDate’s servers so conversations can continue after you leave Bluetooth range.
     </div>
 
     <footer>
